@@ -41,7 +41,24 @@
             </ul>
         </div>
     </nav>
+
     <header class="jumbotron">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="sehrim.html">Şehrim</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <?php if($_GET['type'] == "kanyon") { ?>
+                        Valla Kanyonu
+                    <?php } else if($_GET['type'] == "kale") { ?>
+                        Kastamonu Kalesi
+                    <?php } else if($_GET['type'] == "park") { ?>
+                        Küre Dağları Milli Parkı
+                    <?php } else if($_GET['type'] == "kayak") { ?>
+                        Ilgaz Kayak Merkezi
+                    <?php } ?>
+                </li>
+            </ol>
+        </nav>
         <div class="text-center">
             <h1>
             <?php if($_GET['type'] == "kanyon") { ?>

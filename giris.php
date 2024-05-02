@@ -59,7 +59,7 @@
 			<form action="girisKontrol.php" method="POST" onsubmit="return checkMail()">
 				<div class="form-group">
 					<label for="email">E-Posta</label>
-					<input type="text" name="email" class="form-control" required>
+					<input type="email" name="email" class="form-control" required>
 				</div>
 				<div class="form-group">
 					<label for="password">Parola</label>

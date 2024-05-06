@@ -71,7 +71,6 @@
                 ILGAZ KAYAK MERKEZİ
             <?php } ?>
             </h1>
-            <br>
         </div>
     </header>
 

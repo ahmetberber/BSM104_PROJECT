@@ -30,7 +30,7 @@
 					<a class="nav-link" href="mirasimiz.html">Mirasımız</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="ilgialanlarim.php">İlgi Alanlarım</a>
+					<a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="iletisim.html">İletişim</a>

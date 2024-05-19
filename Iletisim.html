@@ -30,7 +30,7 @@
                     <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ilgialanlarim.php">İlgi Alanlarım</a>
+                    <a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="iletisim.html">İletişim</a>
@@ -70,7 +70,7 @@
                     <label for="message">Mesajınız</label>
                     <textarea name="message" rows="5" class="form-control"></textarea>
                 </div>
-                <button class="btn btn-primary btn-block" type="button" v-on:click="checkMail">Gönder</button>
+                <button class="btn btn-primary btn-block" type="button" v-on:click="validateForm">Gönder</button>
                 <button class="btn btn-danger btn-block" type="button" @click="clearForm">Temizle</button>
             </form>
         </div>
@@ -83,13 +83,20 @@
         new Vue({
             el: '#app',
             methods: {
-                checkMail() {
+                validateForm() {
+                    let name = document.forms["Form"]["name"].value;
                     let email = document.forms["Form"]["email"].value;
-                    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                    if (!regex.test(email)) {
-                        alert("Geçersiz e-posta adresi.");
+                    let city = document.forms["Form"]["city"].value;
+
+                    if (name == "" || email == "" || city == "0") {
+                        alert("Zorunlu alanları doldurunuz.");
                     } else {
-                        document.forms["Form"].submit();
+                        let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                        if (!regex.test(email)) {
+                            alert("Geçersiz e-posta adresi.");
+                        } else {
+                            document.forms["Form"].submit();
+                        }
                     }
                 },
                 clearForm() {
